@@ -8,7 +8,9 @@ Write a function that when given a URL as a string, parses out just the domain n
 
 ***Solution:***
 
-    function domainName(url){
-      regex = url.includes('www') ? /\.(.*?)\./ : /\/\/(.*?)\./;
+    function domainName(url) {
+      regex = url.includes('www') ? /\.(.*?)\./
+        : /http/.test(url) && !url.includes('www') ? /\/\/(.*?)\./
+          : /(.*?)\./;
       return regex.exec(url)[1];
     }
