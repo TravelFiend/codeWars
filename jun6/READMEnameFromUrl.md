@@ -11,6 +11,6 @@ Write a function that when given a URL as a string, parses out just the domain n
     function domainName(url) {
       regex = url.includes('www') ? /\.(.*?)\./
         : /http/.test(url) && !url.includes('www') ? /\/\/(.*?)\./
-          : /(.*?)\./;
+        : /(.*?)\./;
       return regex.exec(url)[1];
     }
