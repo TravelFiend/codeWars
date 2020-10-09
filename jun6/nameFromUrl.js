@@ -1,4 +1,4 @@
-function domainName(url) {
+const domainName = url => {
   regex = url.includes('www') ? /\.(.*?)\./
     : /http/.test(url) && !url.includes('www') ? /\/\/(.*?)\./
       : /(.*?)\./;
