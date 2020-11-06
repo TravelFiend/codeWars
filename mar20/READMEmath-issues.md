@@ -1,4 +1,4 @@
-PROBLEM: 
+***PROBLEM***: 
 
 Oh no, our Math object was "accidently" reset. Can you re-implement some of those functions? We can assure, that only non-negative numbers are passed as arguments. So you don't have to consider things like undefined, null, NaN, negative numbers, strings and so on.
 
@@ -8,7 +8,7 @@ Math.round()
 Math.ceil()
 Math.floor()
 
-SOLUTION:
+***SOLUTION***:
 
     Math.round = function(number) {
       const integer = Number(number.toString().match(/^([^.]*)/)[0]);
